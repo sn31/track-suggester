@@ -76,6 +76,5 @@ $(document).ready(function () {
             $("#result").slideToggle("700ms");
             $('body, html').animate({ scrollTop: $("#result").offset().top }, 1000);
         }
-
     });
 });
