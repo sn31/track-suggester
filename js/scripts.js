@@ -6,8 +6,8 @@ c - PHP
 */
 
 //BACK-END LOGIC
-var findResult = function (answer1, answer2, answer3, answer4, answer5) {
-    var answerArray = [answer1, answer2, answer3, answer4, answer5];
+var findResult = function (answerArray) {
+    
     var i = 0;
     var aCount = 0;
     var bCount = 0;
@@ -25,7 +25,6 @@ var findResult = function (answer1, answer2, answer3, answer4, answer5) {
         }
     }
     var resultCount = Math.max(aCount, bCount, cCount);
-
     var result ="";
     if (resultCount === aCount) {
         result = "Python";
@@ -39,19 +38,26 @@ var findResult = function (answer1, answer2, answer3, answer4, answer5) {
     return result;
 }
 
+var createAnswerArray = function (questionCount) {
+    var j = 0;
+        var answerArray=[];
+        for (j=0;j<questionCount;j++) {
+            var destination = "input:radio[name=q"+ j +"]:checked";
+            answerArray.push[$(destination).val()];
+        }
+    return answerArray;
+}
+
 // FRONT-END LOGIC
 $(document).ready(function () {
     $("form#surveyInput").submit(function (event) {
         event.preventDefault();
-        var answer1 = $("input:radio[name=q1]:checked").val();
-        var answer2 = $("input:radio[name=q2]:checked").val();
-        var answer3 = $("input:radio[name=q3]:checked").val();
-        var answer4 = $("input:radio[name=q4]:checked").val();
-        var answer5 = $("input:radio[name=q5]:checked").val();
-       
-        var test = findResult(answer1, answer2, answer3, answer4, answer5);
-        console.log(test);
-        $(".result").text(findResult(answer1, answer2, answer3, answer4, answer5));
+        var questionCount = $(".radio label").length/3;
+        var name = $("#name").val();
+        var answerArray = createAnswerArray(questionCount);
+        var result = findResult(answerArray);
+        $(".result").text(result);
+        $(".name").text(name);
         $("#result").show();
     });
 });
