@@ -1,5 +1,8 @@
 #result {
     display:none;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #surveyInput {
@@ -11,8 +14,6 @@
     margin-top: 30px;
 }
 .card {
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 20px;
 }
 

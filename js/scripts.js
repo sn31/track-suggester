@@ -59,6 +59,8 @@ $(document).ready(function () {
 
     $("form#surveyInput").submit(function (event) {
         event.preventDefault();
+        $("input").focus();
+
         var questionCount = $(".radio label").length / 3;
         var answerArray = createAnswerArray(questionCount);
         var result = findResult(answerArray);
@@ -69,8 +71,8 @@ $(document).ready(function () {
 
         else {
             $(".result").text(result);
-
-            $("#result").show();
+            $("#result").slideToggle("700ms");
+            $('body, html').animate({ scrollTop: $("#result").offset().top }, 1000);
         }
 
     });
