@@ -50,14 +50,20 @@ var createAnswerArray = function (questionCount) {
 
 // FRONT-END LOGIC
 $(document).ready(function () {
+    $("form#userInfo").submit(function (event) {
+        event.preventDefault();
+        var name = $("#name").val();
+        $(".name").text(name);
+        $("#surveyInput").show();
+    });
+
     $("form#surveyInput").submit(function (event) {
         event.preventDefault();
         var questionCount = $(".radio label").length/3;
-        var name = $("#name").val();
         var answerArray = createAnswerArray(questionCount);
         var result = findResult(answerArray);
         $(".result").text(result);
-        $(".name").text(name);
+       
         $("#result").show();
     });
 });

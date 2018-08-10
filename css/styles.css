@@ -2,6 +2,10 @@
     display:none;
 }
 
+#surveyInput {
+    display: none;
+}
+
 .card {
     margin-left: auto;
     margin-right: auto;
