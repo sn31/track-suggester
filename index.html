@@ -24,7 +24,7 @@
                 <label for="email">E-mail:</label>
                 <input type="text" class="form-control" id="email" placeholder="Optional" />
             </div>
-            <button class="btn btn-success">Start Survery</button>
+            <button class="btn btn-success" id="start">Start Survery</button>
         </form>
         <br/>
         <!-- Survey form -->
@@ -159,7 +159,13 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-info" id="submitSurvey" type="submit" data-toggle="modal" data-target="myModal">Find me a track!</button>
+            <div class="row" id="submit">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <button class="btn btn-info" id="submitSurvey" type="submit" data-toggle="modal" data-target="myModal">Find me a track!</button>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
         </form>
         <br/>
         <!-- Modal -->
@@ -177,9 +183,8 @@
         </div>
         <!-- Result Section -->
         <div class="card" id="result">
-                <div class="card-header"> Result </div>
+            <div class="card-header"> Result </div>
             <div class="card-body">
-                
                 <p>
                     Dear
                     <span class="name"></span>, it seems like you shoud learn

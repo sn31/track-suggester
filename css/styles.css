@@ -8,15 +8,18 @@
 #surveyInput {
     display: none;
 }
-
 #userInfo {
-    width: 50%;
+    width: 30%;
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .card {
     margin-bottom: 20px;
 }
 
 h1 {
     font-family: 'Inknut Antiqua', serif;
+    text-align: center;
 }
