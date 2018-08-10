@@ -63,6 +63,7 @@ $(document).ready(function () {
     $("form#surveyInput").submit(function (event) {
         event.preventDefault();
         $("input").focus();
+        $("#submitSurvey").focus();
         var questionCount = $(".radio label").length / 3;
         var answerArray = createAnswerArray(questionCount);
         var result = findResult(answerArray);
