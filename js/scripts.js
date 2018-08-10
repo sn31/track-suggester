@@ -72,6 +72,7 @@ $(document).ready(function () {
 
         else {
             $(".result").text(result);
+            $("form#surveyInput").slideToggle("400ms");
             $("#result").slideToggle("700ms");
             $('body, html').animate({ scrollTop: $("#result").offset().top }, 1000);
         }

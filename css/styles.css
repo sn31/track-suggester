@@ -3,6 +3,7 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 #surveyInput {
@@ -10,16 +11,20 @@
 }
 #userInfo {
     width: 30%;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .card {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+.card-header {
+    font-family: 'Cherry Swash', cursive;
+    background-color:#d1b3ff;
 }
 
 h1 {
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Bungee', cursive;
     text-align: center;
 }
