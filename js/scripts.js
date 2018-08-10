@@ -1,6 +1,6 @@
 /*
 Answer choices and their corresponding track:
-a - C#
+a - Python
 b - Java
 c - PHP
 */
@@ -13,8 +13,8 @@ $(document).ready(function () {
         var answer3 = $("input:radio[name=q3]:checked").val();
         var answer4 = $("input:radio[name=q4]:checked").val();
         var answer5 = $("input:radio[name=q5]:checked").val();
-        var answer6 = $("input:radio[name=q6]:checked").val();
-        var answerArray = [answer1, answer2, answer3, answer4, answer5, answer6];
+       
+        var answerArray = [answer1, answer2, answer3, answer4, answer5];
 
         var i = 0;
         var aCount = 0;
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         var result ="";
         if (resultCount === aCount) {
-            result = "C#";
+            result = "Python";
         }
         else if (resultCount === bCount) {
             result = "Java";
