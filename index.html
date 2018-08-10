@@ -17,14 +17,17 @@
         <!-- User Information -->
         <form id="userInfo">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name"><span class="inputLabel">Name</span></label>
                 <input type="text" class="form-control" id="name" placeholder="Required" required/>
             </div>
             <div class="form-group">
-                <label for="email">E-mail</label>
+                <label for="email"><span class="inputLabel">E-mail</span></label>
                 <input type="text" class="form-control" id="email" placeholder="Optional" />
             </div>
-            <button class="btn btn-success" id="start">Start Survery</button>
+            <div id="startButton">
+                <button class="btn" id="start" type="submit">Start Survey</button>
+            </div>
+            
         </form>
         <br/>
         <!-- Survey form -->
@@ -162,7 +165,7 @@
             <div class="row" id="submit">
                 <div class="col-md-5"></div>
                 <div class="col-md-2">
-                    <button class="btn btn-info" id="submitSurvey" type="submit" data-toggle="modal" data-target="myModal">Find me a track!</button>
+                    <button class="btn" id="submitSurvey" type="submit" data-toggle="modal" data-target="myModal">Find me a track!</button>
                 </div>
                 <div class="col-md-5"></div>
             </div>

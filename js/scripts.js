@@ -50,6 +50,7 @@ var createAnswerArray = function (questionCount) {
     }
     return answerArray;
 }
+
 // FRONT-END LOGIC
 $(document).ready(function () {
     $("form#userInfo").submit(function (event) {
