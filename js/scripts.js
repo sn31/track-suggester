@@ -64,7 +64,7 @@ $(document).ready(function () {
         var result = findResult(answerArray);
 
         if ($("input:radio:checked").length < questionCount) {
-            alert("Please select an answer for each question!");
+            $('#myModal').modal('toggle');
         }
 
         else {
