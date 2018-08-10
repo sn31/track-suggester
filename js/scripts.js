@@ -7,13 +7,13 @@ c - PHP
 
 //BACK-END LOGIC
 var findResult = function (answerArray) {
-    
+
     var i = 0;
     var aCount = 0;
     var bCount = 0;
     var cCount = 0;
 
-    for (i=0;i<answerArray.length;i++) {
+    for (i = 0; i < answerArray.length; i++) {
         if (answerArray[i] === "a") {
             aCount++;
         }
@@ -25,7 +25,7 @@ var findResult = function (answerArray) {
         }
     }
     var resultCount = Math.max(aCount, bCount, cCount);
-    var result ="";
+    var result = "";
     if (resultCount === aCount) {
         result = "Python";
     }
@@ -40,11 +40,11 @@ var findResult = function (answerArray) {
 
 var createAnswerArray = function (questionCount) {
     var j = 0;
-        var answerArray=[];
-        for (j=0;j<questionCount;j++) {
-            var destination = "input:radio[name=q"+ j +"]:checked";
-            answerArray.push[$(destination).val()];
-        }
+    var answerArray = [];
+    for (j = 0; j < questionCount; j++) {
+        var destination = "input:radio[name=q" + j + "]:checked";
+        answerArray.push[$(destination).val()];
+    }
     return answerArray;
 }
 
@@ -59,11 +59,19 @@ $(document).ready(function () {
 
     $("form#surveyInput").submit(function (event) {
         event.preventDefault();
-        var questionCount = $(".radio label").length/3;
+        var questionCount = $(".radio label").length / 3;
         var answerArray = createAnswerArray(questionCount);
         var result = findResult(answerArray);
-        $(".result").text(result);
-       
-        $("#result").show();
+
+        if ($("input:radio:checked").length < questionCount) {
+            alert("Please select an answer for each question!");
+        }
+
+        else {
+            $(".result").text(result);
+
+            $("#result").show();
+        }
+
     });
 });
