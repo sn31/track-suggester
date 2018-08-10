@@ -54,7 +54,7 @@ $(document).ready(function () {
         event.preventDefault();
         var name = $("#name").val();
         $(".name").text(name);
-        $("#surveyInput").show();
+        $("#surveyInput").slideToggle("600ms");
     });
 
     $("form#surveyInput").submit(function (event) {
