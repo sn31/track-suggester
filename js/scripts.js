@@ -28,12 +28,15 @@ var findResult = function (answerArray) {
     var result = "";
     if (resultCount === aCount) {
         result = "Python";
+        $("#result-card").append($('<img>',{class: 'logo',src:'img/python.png'}));
     }
     else if (resultCount === bCount) {
         result = "Java";
+        $("#result-card").append($('<img>',{class: 'logo',src:'img/java.jpg'}));
     }
     else {
         result = "PHP";
+        $("#result-card").append($('<img>',{class: 'logo',src:'img/php.png'}));
     }
     return result;
 }

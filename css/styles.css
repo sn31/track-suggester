@@ -22,9 +22,24 @@
 .card-header {
     font-family: 'Cherry Swash', cursive;
     background-color:#d1b3ff;
+    font-size: 20px;
 }
 
 h1 {
     font-family: 'Bungee', cursive;
     text-align: center;
+    color:#d1b3ff;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+}
+
+.logo {
+    width: 80%;
+}
+
+#submitSurvey {
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    background-color:#d1b3ff;
+    border-color: black;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
 }
