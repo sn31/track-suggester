@@ -41,13 +41,12 @@ var findResult = function (answerArray) {
 var createAnswerArray = function (questionCount) {
     var j = 0;
     var answerArray = [];
-    for (j = 0; j < questionCount; j++) {
+    for (j = 1; j <= questionCount; j++) {
         var destination = "input:radio[name=q" + j + "]:checked";
-        answerArray.push[$(destination).val()];
+        answerArray.push($(destination).val());
     }
     return answerArray;
 }
-
 // FRONT-END LOGIC
 $(document).ready(function () {
     $("form#userInfo").submit(function (event) {
@@ -61,15 +60,13 @@ $(document).ready(function () {
     $("form#surveyInput").submit(function (event) {
         event.preventDefault();
         $("input").focus();
-
         var questionCount = $(".radio label").length / 3;
         var answerArray = createAnswerArray(questionCount);
         var result = findResult(answerArray);
-
+        
         if ($("input:radio:checked").length < questionCount) {
             $('#myModal').modal('toggle');
         }
-
         else {
             $(".result").text(result);
             $("form#surveyInput").slideToggle("400ms");
